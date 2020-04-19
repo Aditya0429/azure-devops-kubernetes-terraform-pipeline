@@ -9,7 +9,7 @@ pool:
     jobs:
     - job: firstjob
       steps:
-       - bash: echo Build First Job
+      - bash: echo Build First Job
     - job: secondjob
       steps:
        - bash: echo Build Second Job        
@@ -17,15 +17,15 @@ pool:
     jobs:
     - job: DevDeployjob
       steps:
-       - bash: echo Build DevDeploy Job
+      - bash: echo Build DevDeploy Job
   - stage: QADeploy
     jobs:
     - job: QADeployjob
       steps:
-       - bash: echo Build QADeploy Job
+      - bash: echo Build QADeploy Job
   - stage: PRodDeploy
     jobs:
     - job: PRodDeployjob
       steps:
-       - bash: echo Build PRodDeploy Job
+      - bash: echo Build PRodDeploy Job
 
