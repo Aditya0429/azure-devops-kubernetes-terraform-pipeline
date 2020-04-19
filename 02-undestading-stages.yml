@@ -4,28 +4,28 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-  stages:
-  - stage: Build
-    jobs:
-    - job: firstjob
-      steps:
-      - bash: echo Build First Job
-    - job: secondjob
-      steps:
-       - bash: echo Build Second Job        
-  - stage: DevDeploy
-    jobs:
-    - job: DevDeployjob
-      steps:
-      - bash: echo Build DevDeploy Job
-  - stage: QADeploy
-    jobs:
-    - job: QADeployjob
-      steps:
-      - bash: echo Build QADeploy Job
-  - stage: PRodDeploy
-    jobs:
-    - job: PRodDeployjob
-      steps:
-      - bash: echo Build PRodDeploy Job
+stages:
+- stage: Build
+  jobs:
+  - job: firstjob
+    steps:
+    - bash: echo Build First Job
+  - job: secondjob
+    steps:
+      - bash: echo Build Second Job        
+- stage: DevDeploy
+  jobs:
+  - job: DevDeployjob
+    steps:
+    - bash: echo Build DevDeploy Job
+- stage: QADeploy
+  jobs:
+  - job: QADeployjob
+    steps:
+    - bash: echo Build QADeploy Job
+- stage: PRodDeploy
+  jobs:
+  - job: PRodDeployjob
+    steps:
+    - bash: echo Build PRodDeploy Job
 
