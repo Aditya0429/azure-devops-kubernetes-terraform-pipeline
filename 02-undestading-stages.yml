@@ -13,19 +13,16 @@ pool:
       - job: second job
         steps:
         - bash: echo Build Second Job        
-
   - stage: DevDeploy
     jobs:
       - job: DevDeploy job
         steps:
          - bash: echo DevDeploy JOb
-
   - stage: QADeploy
     jobs:
       - job: DevQADeployDeploy job
         steps:
          - bash: echo QADeploy JOb  
-
   - stage: PRodDeploy
     jobs:
       - job: PRodDeploy job
