@@ -34,6 +34,6 @@ pool:
         runOnce:
           deploy:
             steps:
-            - script: echo Deploy to QA              
+            - script: echo Deploy too QA             
 
 
