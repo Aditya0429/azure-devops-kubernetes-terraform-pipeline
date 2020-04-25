@@ -24,7 +24,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'docker-hub'
-        repository: 'aditya6/currency-exachnage-aditya-devops'
+        repository: 'aditya6/currency-exachnage-adityaa-devops'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
