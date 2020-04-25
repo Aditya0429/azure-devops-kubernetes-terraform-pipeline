@@ -10,29 +10,29 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-  stages:
-  - stage: Build
-    jobs:
-    - job: BuildJob
-      steps:
-      - bash: echo "do a BUILD JOB"
-  - stage: DevDeploy
-    jobs:
-    - deployment: DevDeployJob
-      environment: Dev
-      strategy: 
-        runOnce:
-          deploy:
-            steps:
-            - script: echo Deploy to Dev  
-  - stage: QADeploy
-    jobs:
-    - deployment: DevDeployJob
-      environment: QA
-      strategy: 
-        runOnce:
-          deploy:
-            steps:
-            - script: echo Deploy too QA             
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJob
+    steps:
+    - bash: echo "do a BUILD JOB"
+- stage: DevDeploy
+  jobs:
+  - deployment: DevDeployJob
+    environment: Dev
+    strategy: 
+      runOnce:
+        deploy:
+          steps:
+          - script: echo Deploy to Dev  
+- stage: QADeploy
+  jobs:
+  - deployment: DevDeployJob
+    environment: QA
+    strategy: 
+      runOnce:
+        deploy:
+          steps:
+          - script: echo Deploy too QA             
 
 
