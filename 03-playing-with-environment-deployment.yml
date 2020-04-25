@@ -33,6 +33,6 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: echo Deploy too QA             
+          - script: echo Deploy too QA test             
 
 
