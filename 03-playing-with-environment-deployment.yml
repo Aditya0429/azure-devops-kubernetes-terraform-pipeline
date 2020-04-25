@@ -1,4 +1,3 @@
-
 trigger:
 - master
 
@@ -28,7 +27,7 @@ pool:
             - script: echo Deploy to Dev  
   - stage: QADeploy
     jobs:
-    - deployment: QADeployJob
+    - deployment: DevDeployJob
       environment: QA
       strategy: 
         runOnce:
